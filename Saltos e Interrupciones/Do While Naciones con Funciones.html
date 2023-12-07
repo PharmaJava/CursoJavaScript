@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function main() {
+            const naciones = obtenerNaciones();
+            const existeEspaña = buscarEspaña(naciones);
+
+            if (existeEspaña) {
+                document.write("España encontrada");
+            } else {
+                document.write("España no encontrada");
+            }
+        }
+
+        function obtenerNaciones() {
+            let naciones = [];
+            let input;
+
+            do {
+                input = prompt("Introduce una nación\nPulsa cancelar para salir");
+
+                if (input !== null && input.trim() !== "") {
+                    naciones.push(input.trim());
+                }
+            } while (input !== null);
+
+            return naciones;
+        }
+
+        function buscarEspaña(naciones) {
+            const espanaLowerCase = "españa";
+
+            for (let i = 0; i < naciones.length; i++) {
+                if (naciones[i].toLowerCase() === espanaLowerCase) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        // Llamamos a la función principal
+        main();
+    </script>
+</body>
+</html>

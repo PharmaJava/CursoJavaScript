@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let naciones=[];
+
+        let num=0;
+
+    while(true){
+        naciones[num]=prompt("Introduce una nación \nPulsa cancelar para salir");
+
+        if  (naciones[num]==null) break;
+
+            num+=1;
+    }
+        for(let i=0; i<naciones.length; i++) {
+
+            if(naciones[i]== "España" || naciones[i]== "españa" 
+            || naciones [i]== "ESPAÑA"){
+
+                document.write("España encontrada");
+
+                break;
+            }
+
+            num+-1;
+        }
+
+    </script>
+</body>
+</html>
