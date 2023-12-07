@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style=" font-size: 2em;">
+
+    <script>
+
+    let Coche={color:"rojo",peso:1200, potencia:250, cilindrada:2000};
+// Es la forma complicada con bucle for of
+    // let claveValor=""; 
+
+    // for(let [k, v] of Object.entries(Coche)){
+
+    //     claveValor+= k + ":" + v;
+    //     claveValor+=" ";
+    // }
+
+    // document.write(claveValor);
+
+    for (let propiedad in Coche){
+        
+        document.write(propiedad + ":" + Coche[propiedad] + "<br>");
+
+    }
+    </script>
+    
+</body>
+</html>

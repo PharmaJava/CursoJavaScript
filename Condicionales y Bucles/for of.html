@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucle for of</title>
+</head>
+<body style="font-size: 2em;">
+
+<script>
+
+
+let datos= [7,9,"Juan",25,37,true];
+
+
+for (let dato of datos){
+
+    document.write(dato + "<br>");
+}
+
+let segundo= [["Jose",7,9],[5,"Maria",8],[2,5,"Antonio"]];
+
+for (let i=0;i<3;i++){
+for (let j=0;j<3;j++){
+
+    document.write(segundo[i][j] + "<br>");
+}
+
+}
+
+for (dim1 of segundo){
+
+
+    for(dim2 of dim1){
+
+        document.write(dim2 + "<br>");
+    }
+}
+
+
+let email=prompt("introduce tu email");
+
+let arroba=0;
+for (letra of email){
+    
+    if (letra=="@") arroba++;
+
+}
+if (arroba==1) document.write("Email correcto");
+else document.write("Email incorrecto");
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-size: 2em;">
+    <script type="text/javascript">
+
+        let inicio=prompt("Introduce el inicio del bucle");
+
+        let final=prompt("Introduce el final del bucle");
+
+        inicio = parseInt(inicio);
+        final = parseInt(final);
+
+        for (let z=inicio; z<=final; z++){
+            document.write(`Vuelta nº ${z}</br>`);
+        }
+        for(let contador=1;contador<=10;contador+=2){
+
+            document.write("Vuelta de bucle nº " + contador +"</br>");
+        }
+
+        for(let x=1,y=2; x<10;x++,y++){
+            document.write(`${x} es menor que ${y}</br>`);
+        }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplicación Meteorológica</title>
+</head>
+<body>
+
+<script>
+  // Obtiene el código de clima desde el usuario mediante prompt
+  let codigoClima = prompt("Introduce el código de clima (1-6):");
+
+  // Convierte el código a un número entero
+  codigoClima = parseInt(codigoClima);
+
+  // Utiliza switch-case para determinar la descripción del clima
+  let descripcionClima;
+
+  switch (codigoClima) {
+    case 1:
+      descripcionClima = "Día soleado";
+      break;
+    case 2:
+      descripcionClima = "Parcialmente nublado";
+      break;
+    case 3:
+      descripcionClima = "Mayormente nublado";
+      break;
+    case 4:
+      descripcionClima = "Lluvioso";
+      break;
+    case 5:
+      descripcionClima = "Nieve";
+      break;
+    case 6:
+      descripcionClima = "Tormenta";
+      break;
+    default:
+      descripcionClima = "Código de clima no válido";
+  }
+
+  // Muestra la descripción del clima en la página web
+  document.write(`<h1>${descripcionClima}</h1>`);
+
+</script>
+
+</body>
+</html>
