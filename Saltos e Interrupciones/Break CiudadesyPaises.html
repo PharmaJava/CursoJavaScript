@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-size: 2em;">
+    <script>
+
+    let ciudades= [["Bogotá", "Medellín", "Cali"], ["Barcelona","Madrid", "Málaga"],["Roma", "Milán", "Venecia"]];
+
+   bucleprincipal:for(let i=0; i<3; i++){
+
+        for(let j=0;j<3;j++){
+
+            if (ciudades[i][j]=="Madrid") break;
+
+            document.write(ciudades[i][j]+ "</br>");
+        }
+
+        document.write("Estoy en el bucle principal </br>");
+    }
+
+
+
+    </script>
+</body>
+</html>
