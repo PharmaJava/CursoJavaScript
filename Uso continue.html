@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-size: 2em;">
+    <script>
+
+    let num_trabajador=0;    
+    let salarios=[];
+    
+    
+        while(num_trabajador<5){
+
+
+        let salario=prompt("Introduce salario del trabajador " + (num_trabajador+1) );
+
+        if(!salario) continue;
+        
+        if(salario<1000) continue;//ignora la linea siguiente y vuelve a la siguiente iteracion
+      
+        salarios[num_trabajador]=salario - (salario*0.25);
+
+        num_trabajador+=1;
+    }
+
+    for (salario of salarios){
+
+        if(!salario) continue;
+
+        document.write(salario + "</br>");
+    }
+
+ </script>
+</body>
+</html>
