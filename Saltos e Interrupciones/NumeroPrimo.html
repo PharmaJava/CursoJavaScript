@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Primos</title>
+</head>
+<body>
+    <script>
+
+        // Función para verificar si un número es primo
+        function esPrimo(numero) {
+            for (let i = 2; i < numero; i++) {
+                if (numero % i === 0) {
+                    return false;
+                }
+            }
+            return numero > 1;
+        }
+
+        // Función para obtener los 3 primeros números primos en un rango
+        function obtenerPrimosEnRango(inferior, superior) {
+            let primosEncontrados = 0;
+            let resultado = "";
+
+            for (let num = inferior; num <= superior; num++) {
+                if (esPrimo(num)) {
+                    resultado += num + "   ";
+                    primosEncontrados++;
+
+                    if (primosEncontrados === 3) {
+                        break; // Salir del bucle cuando se encuentran 3 primos
+                    }
+                }
+            }
+
+            return resultado;
+        }
+
+        // Solicitar números mediante ventanas de prompt
+        let num1 = parseInt(prompt("Introduce el primer número:"));
+        let num2 = parseInt(prompt("Introduce el segundo número:"));
+
+        // Verificar que se han ingresado números válidos
+        if (!isNaN(num1) && !isNaN(num2)) {
+            // Mostrar los 3 primeros números primos en el rango especificado
+            let resultadoPrimos = obtenerPrimosEnRango(num1, num2);
+            alert("Los 3 primeros números primos entre " + num1 + " y " + num2 + " son: " + resultadoPrimos);
+        } else {
+            alert("Por favor, introduce números válidos.");
+        }
+
+    </script>
+</body>
+</html>
