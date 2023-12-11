@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let triangulo = {
+
+            base: 12,
+            altura: 15,
+
+            get area() {
+                return (this.base * this.altura) / 2;
+            },
+
+            set area(nuevaBase) {
+                this.base = nuevaBase;
+            }
+        };
+
+        // Hemos escrito la nueva área gracias al getter y al setter
+        triangulo.area = 100;
+
+        document.write(triangulo.area);
+
+        let persona = {
+
+            nombre: "Juan",
+            apellido: "Diaz",
+
+            get dameNombre() {
+                return `${this.nombre} ${this.apellido}`;
+            },
+
+            set dameNombre(nuevoNombre) {
+                [this.nombre, this.apellido] = nuevoNombre.split(" ");
+            }
+        };
+
+        persona.dameNombre = "Maria Lopez";
+
+        document.write(persona.dameNombre);
+
+    </script>
+</body>
+</html>

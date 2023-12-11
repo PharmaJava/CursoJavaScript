@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-size: 2em;">
+
+    <script>
+
+        let p1 = { nombre: "Juan", edad: 18 };
+        let coche = { color: "rojo", potencia: 400, propietario: p1, pasajeros: 5 };
+
+        // Añadir un método toString al objeto coche
+        coche.toString = function () {
+            return "El color del coche es: " + `${this.color}` +
+                " y tiene " + `${this.potencia}` + " caballos";
+        };
+
+        let furgoneta = { carga: 4500 };
+
+        // Copiar propiedades de coche a furgoneta
+        Object.assign(furgoneta, coche);
+
+        // Mostrar el objeto furgoneta en la consola
+        console.log(furgoneta);
+
+        // Serializar el objeto coche a formato JSON
+        let cocheSerializado = JSON.stringify(coche);
+        console.log(cocheSerializado);
+
+        // Deserializar el objeto JSON a un objeto JavaScript
+        let cocheDeserializado = JSON.parse(cocheSerializado);
+        console.log(cocheDeserializado);
+
+        // Mostrar el resultado del método toString en el documento
+        document.write(coche.toString());
+
+    </script>
+</body>
+</html>

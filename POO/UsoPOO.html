@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-size: 2em;">
+
+    <script>
+
+        // let coche={color:"rojo", potencia:400}
+
+        // document.write(coche.color);
+
+        let coche={color:"rojo", potencia:400};
+
+        // console.log(coche);
+
+        coche["pasajeros"]= 5; //para crear una nueva propiedad
+
+        coche.pasajeros= 4; //modificamos el valor de la propiedad
+        
+        coche.color="azul";
+
+        document.write(coche.color +"<br>");
+
+        document.write(coche["potencia"]+"<br>");
+
+
+        for (let i=0; i<5; i++){
+//creamos 5 propiedades de la cilindrada con el bucle for
+            coche[`cilindrada${i}`]= 2000+ (i*100) + " cc";
+        }
+
+        document.write(coche.cilindrada1);
+
+    </script>
+</body>
+</html>

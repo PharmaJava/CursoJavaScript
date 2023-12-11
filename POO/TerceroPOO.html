@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let empleado={
+
+            salario:40000,
+            comision:10000,
+
+            toString:function(){return `(${this.salario}, ${this.comision})`;}
+        };
+
+        document.write(empleado.toString());
+
+
+        let curso= new String("Curso de JavaScript");
+
+        console.log(curso);
+        console.log(curso.valueOf());
+        
+
+        const EJEMPLONOMBRE="color";
+
+        function nombrePropiedad(){return "potencia" + "_coche"};
+
+        // let coche= [];
+
+        // coche[EJEMPLONOMBRE]= "verde";
+
+        // coche[nombrePropiedad()]=400;
+
+        let coche={
+            [EJEMPLONOMBRE]:"Verde",
+            [nombrePropiedad()]:400
+        };
+
+        let furgoneta={capacidad:"grande", autonomia:"extendida"};
+
+        //spread operator
+
+        let suv={ ...coche, ...furgoneta }
+
+        console.log (suv);
+
+    </script>
+</body>
+</html>
