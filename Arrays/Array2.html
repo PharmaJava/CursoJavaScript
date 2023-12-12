@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    let numeros = [7,9,12,55,15];
+
+    // con ... añadimos lo que queramos en el array, en este caso el array numeros
+    
+    let datos= [1.5, true,...numeros ,"Antonio", {alto:100, ancho:300}];
+
+    //tambien copiamos facilmente
+    
+    let copia_numeros= [...numeros];
+
+    //modificamos posiciones de array
+
+    numeros[0]=21;
+
+    copia_numeros[0]=99;
+
+
+
+    for (let i=0;i<numeros.length; i++){
+
+        document.write(numeros[i]+ "<br>");
+    }
+
+
+    document.write("---------"+ "<br>");
+
+    for (copia of copia_numeros){
+
+    document.write(copia + "<br>")
+    }
+
+
+    document.write("---------"+ "<br>");
+
+
+    for (dato of datos){
+
+        document.write(dato + "<br>")
+    }
+    
+    document.write("---------"+ "<br>");
+
+    let nombre= [..."Juan Diaz"]; //con los puntos separamos las letras
+
+    for (let i=0;i<nombre.length; i++){
+
+    document.write(`El caracter se corresponde a la posicion [${i}] ->`+ nombre[i]+ "<br>");
+
+    }
+
+
+
+
+</script>
+</body>
+</html>
