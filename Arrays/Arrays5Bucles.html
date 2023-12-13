@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+    let paises= new Array("España", "Colombia", "Mexico");
+
+    lista="";
+
+    
+    for (let [indice, pais] of paises.entries()){
+
+        // lista+=pais+ ", ";
+
+        document.write(indice + " " + pais + "</br>" );
+    }    
+
+    // document.write(lista);
+    
+
+    paises.forEach(pais=>{
+
+    lista+=pais.toUpperCase() + " ";
+
+    });
+
+    document.write(lista);
+
+
+
+    </script>
+</body>
+</html>

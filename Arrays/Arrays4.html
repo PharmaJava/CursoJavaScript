@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    let numeros= new Array();
+
+    let nombres =new Array(5);
+
+    let paises = new Array ("España", "Colombi", "Mexico");
+
+    paises[3]= "Alemania";  //agregando paises al array
+
+    paises.push ("Francia", "Reino Unido", "Chile"); //se agregan otros elementos pero a la ultima posicion
+
+    paises.unshift("Marruecos"); // se añade al principio
+
+    paises.pop();  //elimina elementos al final del array
+
+    paises.shift(); //elimina el primer lugar
+
+    delete paises [2]; //asi eliminamos elementos del array
+
+    document.write(paises);
+
+    document.write(paises + "<br>");
+
+    document.write(paises.length + "<br>" );
+
+
+
+
+    </script>
+</body>
+</html>

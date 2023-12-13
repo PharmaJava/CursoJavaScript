@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Arrays multidimensionales
+
+    let paises= [["España", "Madrid"],["Colombia", "Bogota"], ["Mexico", "DF"], ["Peru", "Lima"]];
+    
+    console.log(paises);
+
+    paises.push(["Chile", "Santiago"]);
+    
+    console.log(paises);
+
+    let tablas= new Array (10);
+
+    //para convertir un array normal en uno multidimensional
+
+    for(let i=0; i<tablas.length; i++){
+
+    tablas [i] = new Array (10);    
+
+    }
+
+    for (let fila= 0; fila<tablas.length; fila++){
+
+        for (let columna= 0;columna<tablas[fila].length; columna++){
+
+            tablas[columna][fila]= fila*columna;
+
+        }
+    }
+
+    console.log(tablas);
+
+    document.write(tablas);
+
+    </script>
+</body>
+</html>
