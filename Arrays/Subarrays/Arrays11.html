@@ -8,7 +8,33 @@
 <body>
     <script>
 
+    let edades = [35, 15, 25, 69, 81, 36, 51, 55];
 
+    // Slice: devuelve una porción del array sin modificar el original
+    document.write(edades.slice(2, 4));    
+    document.write("<br>");    
+    console.log(edades.slice(-3, -1));    
+
+    // Slice con un solo índice: no modifica el array original
+    document.write(edades.slice(4));    
+    document.write("<br>");    
+    document.write(edades);
+    document.write("<br>");    
+
+    // Splice: modifica el array original y puede insertar elementos
+    document.write(edades.splice(4, 0, "Juan", "Farmacia"));
+    document.write("<br>");    
+    document.write(edades);
+    document.write("<br>");    
+
+    // Fill: llena el array con un valor especificado
+    let miArray = new Array(5);
+    miArray.fill("Juan");  // Rellena todo el array con "Juan"
+    document.write(miArray);
+    document.write("<br>");    
+
+    miArray.fill("Pildoras", 2); // Rellena desde el índice 2
+    document.write(miArray);
 
     </script>
 </body>

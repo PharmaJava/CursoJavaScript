@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    let personas = ["Antonio", "Maria", "Ana", "Oscar", "Paco", "Antonio", "Sara", "Antonio"];
+
+    // indexOf: devuelve la primera posición de un elemento en el array
+    document.write(personas.indexOf("Paco"));
+    document.write("<br>");
+
+    // indexOf devuelve -1 si el elemento no está en el array
+    document.write(personas.indexOf("Olga"));
+    document.write("<br>");
+
+    // indexOf devuelve la primera posición del elemento en el array
+    document.write(personas.indexOf("Antonio"));
+    document.write("<br>");
+
+    // lastIndexOf: devuelve la última posición de un elemento en el array
+    document.write(personas.lastIndexOf("Antonio", -2));
+    document.write("<br>");
+
+    // Función encuentraTodos: encuentra todas las posiciones de un elemento en el array
+    function encuentraTodos(elArray, elemBuscado){
+        let resultados = [];
+        longitud = elArray.length;
+        posicion = 0;
+
+        while(posicion < longitud){
+            posicion = elArray.indexOf(elemBuscado, posicion);
+
+            if(posicion === -1){
+                break;
+            }
+
+            resultados.push(posicion);
+            posicion += 1;
+        }
+
+        return resultados;
+    }
+
+    document.write(encuentraTodos(personas, "Antonio"));
+    document.write("<br>");
+
+    // includes: devuelve true si el elemento está en el array, false si no
+    document.write(personas.includes("Maria")); // Devuelve true
+    document.write(personas.includes("Olga")); // Devuelve false
+
+    </script>
+</body>
+</html>
