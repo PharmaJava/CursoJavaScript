@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-size: 2em;">
+    <script>
+
+    // Stack y Queue => Pilas y Colas    
+
+    let edades = [35, 15, 25, 69, 81, 36, 51, 55];
+
+    let nombres = ["Ana", "Juan", "Pedro", "Maria", "Juan"];
+
+    // Para agregar elementos al final
+    edades.push(90, 85);
+
+    document.write(edades);
+    document.write("<br>");
+
+    // Eliminamos el último elemento de la pila
+    let elementoEliminado = edades.pop();
+    document.write("Elemento eliminado de la pila: " + elementoEliminado + "<br>");
+    document.write(edades);
+    document.write("<br>");
+
+    // Añadimos elemento al comienzo de la cola
+    nombres.unshift("Luis");
+    document.write("Cola después de agregar Luis al comienzo: " + nombres + "<br>");
+
+    // Eliminamos el primer elemento de la cola (FIFO)
+    let primerElementoEliminado = nombres.shift();
+    document.write("Primer elemento eliminado de la cola: " + primerElementoEliminado + "<br>");
+    document.write("Cola después de eliminar el primer elemento: " + nombres + "<br>");
+
+    // Añadimos un nuevo elemento a la cola
+    nombres.push("Antonio");
+
+    // Eliminamos el primer elemento de la cola (FIFO)
+    nombres.shift();
+
+    document.write("Cola después de agregar Antonio y eliminar el primer elemento: " + nombres + "<br>");
+
+    </script>
+</body>
+</html>

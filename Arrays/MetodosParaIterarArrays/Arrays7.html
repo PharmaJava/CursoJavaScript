@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-size: 2em;">
+    <script>
+    
+    let numeros=[5,10,15,20,25];
+   
+    let resultado_suma=0;
+
+    numeros.forEach(sumando);
+
+    function sumando(valor){
+
+        resultado_suma+=valor;
+    }
+
+    document.write("La suma es: " + resultado_suma + "<br>");
+
+    //aqui igual pero con funcion anonima
+
+    numeros.forEach(valor=>{resultado_suma+=valor;});
+
+    document.write("La suma es: " + resultado_suma);
+
+    numeros.forEach(function(valor,indice,elemento_arrauy){[indice]=valor+1;});
+
+    document.write(numeros);
+
+
+    </script>
+</body>
+</html>

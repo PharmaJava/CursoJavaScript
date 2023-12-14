@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let numeros=[5,10,15,20,25];
+
+        // function cuadrado_valores(valor){
+
+        //     return valor*valor;
+
+        // }
+
+    // document.write(numeros.map(cuadrado_valores));
+    
+    // console.log(numeros.map(cuadrado_valores));
+
+    document.write(numeros.map(valor=>Math.sqrt(valor))+ "<br>");
+
+    console.log(numeros.map(valor=>Math.sqrt(valor)));
+
+    let alturas= [190,170,175,200,160];
+    
+    document.write(numeros.map(altura_persona=>"Peso ideal: " + (altura_persona-110)+ "<br>"))
+
+    console.log(numeros.map(altura_persona=>"Peso ideal: " + (altura_persona-110)+ "<br>"))        
+    
+    let edades= [35,15,25,69,81,36,51,55];
+
+    function edad_laboral (edad){
+
+        if(edad>18 && edad <=67) return edad;
+
+    }
+
+    document.write(edades.filter(edad_laboral));
+    
+    console.log(edades.filter(edad_laboral));
+    
+    document.write(edades.filter(edad_laboral>=18 && edad_laboral<=67));
+    </script>
+</body>
+</html>

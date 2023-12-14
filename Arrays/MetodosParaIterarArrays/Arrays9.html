@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    let edades= [35,15,25,69,81,36,51,55];
+
+    let nombres= ["Ana", "Juan", "Pedro", "Maria", "Juan"];
+
+    document.write(nombres.findIndex(encontrar=>encontrar=="Pedro"));
+    document.write("<br>");
+
+    document.write(nombres.find(encontrar=>encontrar.charAt(0)=='J'));
+    document.write("<br>");
+
+    document.write(nombres.find(encontrar=>encontrar.charAt(encontrar.length-1)=='o'));
+    document.write("<br>");
+   
+    //el metodo every con que un valor sea negativo, dará false
+    document.write(edades.every(menores=>menores<100));
+    document.write("<br>");
+
+    document.write(edades.some(menores=>menores<100));
+    document.write("<br>");
+
+    //Buscame ALGUNO que empiece por J (posicion 0)    
+    document.write(edades.some(primera_letra=>primera_letra.charAt(0)=='J'));
+    document.write("<br>");
+
+
+
+    </script>
+</body>
+</html>
