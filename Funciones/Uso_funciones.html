@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+    function saludo (){
+
+        document.write("Saludos desde la funcion");
+        document.write("<br>");
+
+    }    
+
+    saludo();
+
+    for (let i=0; i<5; i++){
+
+        saludo();
+    }    
+
+
+    function saludar (nombre){
+
+        document.write("Bienvenido a la web "+ nombre);
+
+    }
+
+    saludar ("Antonio");
+
+    let nombre_usuario= prompt("Introduce tu nombre");
+
+    saludo(nombre_usuario);
+
+    
+    </script>
+
+</body>
+</html>

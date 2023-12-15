@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // Función para calcular el área de un cuadrado
+    // function area_cuadrado(lado){
+    //     return lado * lado;
+    // }    
+
+    // let lado_figura = prompt("Introduce el lado");
+    // document.write("El área del cuadrado es: " + area_cuadrado(lado_figura));
+
+    // Expresión de función para calcular el área de un cuadrado
+    const lado_figura = function area_cuadrado(lado) {return lado * lado;     };
+
+    document.write(lado_figura(prompt("Introduce el lado por favor")));
+    document.write("<br>");
+
+    // Función para calcular el factorial de un número
+    function calculo_factorial(num) {
+        let resultado = 1;
+        if (num <= 1) return 1;
+        else {
+            for (let i = 1; i <= num; i++) {
+                resultado = resultado * i;
+            }
+        }
+        return resultado;
+    }
+
+    document.write(calculo_factorial(prompt("Introduce el número")));
+    document.write("<br>");
+
+    // Expresión de función para calcular el factorial de un número
+    const factorial = function calculodefactorial(num) {
+        if (num <= 1) return 1;
+        else return num * calculodefactorial(num - 1);
+    };
+
+    document.write(factorial(prompt("Introduce el número")));
+
+    </script>
+</body>
+</html>

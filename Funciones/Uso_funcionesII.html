@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    function suma(op1, op2,op3) {
+
+        // document.write(op1+op2+op3);
+
+        return op1 + op2 + op3;
+
+    }    
+
+    let resultado_suma= suma (50,36,91)
+
+    document.write(resultado_suma + "<br>");
+
+    function calculo_comision(ventas, antigüedad, zona){
+
+        let comision= 0;
+        
+        if (ventas> 1000) comision=(ventas*15)/100;
+
+        if (antigüedad>5) comision+=100;
+
+        if (zona=="norte") comision+=50;
+
+        if (zona=="sur") comision+=60;
+
+        return comision;
+    } 
+
+    total_ventas= prompt("Introduce las ventas de este mes");
+
+    ant_empresa= prompt ("Introduce tu antigüedad en la empresa");
+
+    zona_ventas= ("Introduce tu zona de trabajo: (norte/sur)");
+
+    document.write("La comision de este mes es: ", calculo_comision(total_ventas,ant_empresa, zona_ventas));
+
+
+
+    </script>
+</body>
+</html>

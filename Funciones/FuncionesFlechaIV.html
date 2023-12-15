@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // Funciones flecha o arrow functions
+
+    // Arrow function para calcular el área de un cuadrado
+    const area_cuadrado = lado => lado * lado;
+
+    // Arrow function para calcular el área de un triángulo
+    const area_triangulo = (base, altura) => (base * altura) / 2;
+
+    document.write(area_triangulo(5, 4) + "<br>");
+
+    // Se puede simplificar aún más cuando solo tiene una instrucción return
+    const area_triangulo1 = (base1, altura1) => (base1 * altura1) / 2;
+
+    document.write(area_triangulo1(5, 4) + "<br>");
+
+    // Cuando la función solo tiene un parámetro se pueden simplificar los paréntesis
+    const area_cuadrado_simple = lado => lado * lado;
+
+    document.write(area_cuadrado_simple(5));
+
+    </script>
+</body>
+</html>
