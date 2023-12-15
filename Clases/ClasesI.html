@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // Definición de la clase Usuario
+    class Usuario {
+        // Constructor de la clase con parámetros nombre, contraseña y perfil
+        constructor(nombre, contraseña, perfil) {
+            this.nombre = nombre;
+            this.contraseña = contraseña;
+            this.perfil = perfil;
+        }
+
+        // Método de la clase para saludar
+        saludar() {
+            return "Soy un usuario y os saludo";
+        }
+    }    
+
+    // Creación de instancias (objetos) de la clase Usuario
+    let usuario_Maria = new Usuario("Maria", "12345", "administradora");
+    let usuario_Juan = new Usuario("Juan", "54321", "standard");
+    let usuario_Antonio = new Usuario("Antonio", "654654", "administradora");
+
+    // Acceso a propiedades y método de los objetos
+    document.write(usuario_Maria.contraseña + "<br>");
+    document.write(usuario_Maria.saludar());
+
+    </script>
+</body>
+</html>

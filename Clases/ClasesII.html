@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // Definición de la clase Usuario
+    class Usuario {
+        // Constructor de la clase con parámetros nombre, contraseña y perfil
+        constructor(nombre, contraseña, perfil) {
+            this.nombre = nombre;
+            this.contraseña = contraseña;
+            this.perfil = perfil;
+        }
+
+        // Método de la clase para saludar
+        saludar() {
+            return "Soy un usuario y os saludo";
+        }
+
+        login(){
+            return "Estoy haciendo login";
+        }
+
+        logout(){
+            return "Estoy haciendo logout";
+        }
+    }    
+
+    // Creación de una nueva clase que hereda de Usuario
+    class Estudiante extends Usuario {
+        constructor(curso, nombre, contraseña, perfil) {
+            super(nombre, contraseña, perfil);
+            this.curso = curso;
+        }
+
+        estudia(tema){
+            return "Estoy estudiando: " + tema;
+        }
+    }
+
+    // Creación de instancias (objetos) de la clase Usuario y Estudiante
+    let usuario_Maria = new Usuario("Maria", "12345", "administradora");
+    let estudiante_Pedro = new Estudiante("Excel", "Pedro", "55555", "Estudiante");
+
+    // Acceso a propiedades y métodos de los objetos
+    document.write(usuario_Maria.contraseña + "<br>");
+    document.write(usuario_Maria.saludar() + "<br>");
+
+    document.write(estudiante_Pedro.curso + "<br>");
+    document.write(estudiante_Pedro.estudia("JavaScript") + "<br>");
+
+    </script>
+</body>
+</html>
