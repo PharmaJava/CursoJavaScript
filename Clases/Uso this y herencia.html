@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-size: 2em;">
+    <script>
+
+        //Herencia de una clase predefinida de JS que es Array
+        class ManejoArray extends Array{
+
+            get primero (){
+
+                return this[0];
+            }
+
+            get ultimo(){
+
+                return this[this.length-1]
+            }
+        }
+
+
+    let array1 = new ManejoArray();    
+    array1.push("Antonio", "Maria","Jose", "Sandra");
+    
+    document.write(array1.primero);
+    document.write("</br>");
+    document.write(array1.ultimo + "<br>");    
+    
+
+
+    </script>
+</body>
+</html>

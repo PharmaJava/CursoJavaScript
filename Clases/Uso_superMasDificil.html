@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Definición de una clase MapaTipos que hereda de la clase Map de JavaScript
+        class MapaTipos extends Map {
+
+            // Constructor de la clase MapaTipos
+            // tipo_clave: el tipo esperado para las claves
+            // tipo_valor: el tipo esperado para los valores
+            // valores: una matriz de pares clave-valor opcionales para inicializar el mapa
+            constructor(tipo_clave, tipo_valor, valores) {
+
+                // Comprobación de tipos para los valores iniciales proporcionados
+                if (valores) {
+                    for (let [clave, valor] of valores) {
+
+                        // Verifica si el tipo de la clave o del valor no coincide con los tipos esperados
+                        if (typeof clave !== tipo_clave || typeof valor !== tipo_valor) {
+
+                            // Lanza un error indicando qué clave y valor tienen tipos incorrectos
+                            throw new TypeError(`Error en los tipos para ${clave}, ${valor}`);
+                        }
+                    }
+                }
+
+                // Llama al constructor de la clase Map para inicializar el mapa con los valores proporcionados
+                super(valores);
+            }
+        }
+
+        // Creación de una matriz de datos
+        let mis_datos = [["nombre", "Juan"], ["apellido", "Diaz"], ["edad", 19]];
+
+        // Creación de una instancia de la clase MapaTipos
+        // Se espera que las claves y los valores sean de tipo "string"
+        let datos = new MapaTipos("string", "string", mis_datos);
+
+        // Muestra en el documento el valor correspondiente a la clave "edad"
+        document.write(datos.get("edad"));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Definición de una clase abstracta Persona
+        class Persona {
+
+            // Método abstracto habla
+            habla() {
+                // Un método es abstracto cuando está vacío y debe ser implementado por las subclases
+                throw new Error("Este es un método abstracto y se debe sobreescribir en las subclases");
+            }
+        }
+
+        // Definición de una subclase Empleado que extiende de Persona
+        class Empleado extends Persona {
+
+            // Implementación del método habla para la clase Empleado
+            habla() {
+                return "El empleado habla español";
+            }
+        }
+
+        // Definición de otra subclase Alumno que extiende de Persona
+        class Alumno extends Persona {
+
+            // Implementación del método habla para la clase Alumno
+            habla() { 
+                return "El alumno habla chino";
+            }
+        }
+
+        // Creación de una instancia de la clase Empleado
+        emp1 = new Empleado();
+
+        // Muestra en el documento el resultado de llamar al método habla de la instancia Empleado
+        document.write(emp1.habla() + "<br>");
+        
+        // Creación de una instancia de la clase Alumno
+        alu1 = new Alumno();
+
+        // Muestra en el documento el resultado de llamar al método habla de la instancia Alumno
+        document.write(alu1.habla() + "<br>");
+
+    </script>
+</body>
+</html>

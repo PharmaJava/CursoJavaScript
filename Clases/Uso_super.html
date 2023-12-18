@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Definición de la clase Animal
+        class Animal {
+
+            // Constructor de la clase Animal
+            constructor(ojos, patas) {
+                this.ojos = ojos;
+                this.patas = patas;
+            }
+
+            // Método de la clase Animal para describir la acción de comer
+            come(alimento) {
+                return "El animal come " + alimento;
+            }
+
+            // Método de la clase Animal para describir las características del animal
+            caracteristicas() {
+                return "El animal introducido tiene " + this.ojos + " ojos y " + this.patas + " patas";
+            }
+        }
+
+        // Definición de la clase Perro que hereda de la clase Animal
+        class Perro extends Animal {
+
+            // Constructor de la clase Perro que llama al constructor de la clase Animal usando super()
+            constructor(ojos, patas, hocico) {
+                super(ojos, patas);
+                this.hocico = hocico;
+            }
+
+            // Sobrescribir el método come de la clase Animal en la clase Perro
+            come(alimento) {
+                // Llama al método come de la clase Animal usando super() y proporciona "carne" como argumento
+                return super.come("carne");
+            }
+
+            // Sobrescribir el método caracteristicas de la clase Animal en la clase Perro
+            caracteristicas() { 
+                // Llama al método caracteristicas de la clase Animal usando super() y agrega información específica de Perro
+                return super.caracteristicas() + " y " + this.hocico + " hocico";  
+            }
+        }
+
+        // Crear una instancia de la clase Perro llamada tobi con 2 ojos, 4 patas y 1 hocico
+        tobi = new Perro(2, 4, 1);
+
+        // Mostrar en el documento las características del perro utilizando el método caracteristicas
+        document.write(tobi.caracteristicas());
+
+    </script>
+</body>
+</html>
