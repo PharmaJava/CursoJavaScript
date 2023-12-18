@@ -11,6 +11,13 @@
         // Definición de una clase abstracta Persona
         class Persona {
 
+            constructor (){
+
+                // Construimos un constructor abstracto
+                if (this.constructor==Persona){
+                    throw new Error("la clase persona es abstracta y no se puede instanciar");
+                }
+            }
             // Método abstracto habla
             habla() {
                 // Un método es abstracto cuando está vacío y debe ser implementado por las subclases
