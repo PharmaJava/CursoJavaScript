@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furgoneta</title>
+</head>
+<body>
+    <script>
+
+        // Definición de la clase Vehículo
+        class Vehiculo {
+
+            // Método constructor para inicializar propiedades
+            constructor(modelo, marca, precio, km) {
+                this.modelo = modelo;
+                this.marca = marca;
+                this.precio = precio;
+                this.km = km;
+            }
+
+            // Métodos getter y setter para la propiedad modelo
+            getModelo() {
+                return this.modelo;
+            }
+
+            setModelo(nuevoModelo) {
+                this.modelo = nuevoModelo;
+            }
+
+            // Métodos getter y setter para la propiedad marca
+            getMarca() {
+                return this.marca;
+            }
+
+            setMarca(nuevaMarca) {
+                this.marca = nuevaMarca;
+            }
+
+            // Métodos getter y setter para la propiedad precio
+            getPrecio() {
+                return this.precio;
+            }
+
+            setPrecio(nuevoPrecio) {
+                this.precio = nuevoPrecio;
+            }
+
+            // Métodos getter y setter para la propiedad km
+            getKm() {
+                return this.km;
+            }
+
+            setKm(nuevosKm) {
+                this.km = nuevosKm;
+            }
+
+            // Método para mostrar la marca y el modelo del vehículo por consola
+            mostrarMarcaYModelo() {
+                console.log(`${this.marca} ${this.modelo}`);
+            }
+        }
+
+        // Definición de la clase Furgoneta que hereda de Vehiculo
+        class Furgoneta extends Vehiculo {
+
+            // Constructor para inicializar propiedades de modelo, marca, precio, km y carga
+            constructor(modelo, marca, precio, km, carga) {
+                // Llama al constructor de la clase base (Vehiculo)
+                super(modelo, marca, precio, km);
+                this.carga = carga;
+            }
+
+            // Métodos getter y setter para la propiedad carga
+            getCarga() {
+                return this.carga;
+            }
+
+            setCarga(nuevaCarga) {
+                this.carga = nuevaCarga;
+            }
+
+            // Método para obtener marca, modelo y carga de la furgoneta por consola
+            mostrarMarcaModeloCarga() {
+                console.log(`${this.getMarca()} ${this.getModelo()} - Carga: ${this.carga}`);
+            }
+        }
+
+        // Creación de un objeto Furgoneta
+        let miFurgoneta = new Furgoneta("Transporter", "Volkswagen", 35000, 70000, 1500);
+
+        // Mostrar marca, modelo y carga de la furgoneta por consola
+        miFurgoneta.mostrarMarcaModeloCarga();
+
+    </script>
+</body>
+</html>

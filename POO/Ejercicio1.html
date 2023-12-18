@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehículo</title>
+</head>
+<body>
+    <script>
+
+        // Definición de la clase Vehículo
+        class Vehiculo {
+
+            // Método constructor para inicializar propiedades
+            constructor(modelo, marca, precio, km) {
+                this.modelo = modelo;
+                this.marca = marca;
+                this.precio = precio;
+                this.km = km;
+            }
+
+            // Métodos getter y setter para la propiedad modelo
+            getModelo() {
+                return this.modelo;
+            }
+
+            setModelo(nuevoModelo) {
+                this.modelo = nuevoModelo;
+            }
+
+            // Métodos getter y setter para la propiedad marca
+            getMarca() {
+                return this.marca;
+            }
+
+            setMarca(nuevaMarca) {
+                this.marca = nuevaMarca;
+            }
+
+            // Métodos getter y setter para la propiedad precio
+            getPrecio() {
+                return this.precio;
+            }
+
+            setPrecio(nuevoPrecio) {
+                this.precio = nuevoPrecio;
+            }
+
+            // Métodos getter y setter para la propiedad km
+            getKm() {
+                return this.km;
+            }
+
+            setKm(nuevosKm) {
+                this.km = nuevosKm;
+            }
+
+            // Método para mostrar la marca y el modelo del vehículo por consola
+            mostrarMarcaYModelo() {
+                console.log(`${this.marca} ${this.modelo}`);
+            }
+        }
+
+        // Creación de un objeto Vehículo
+        let miVehiculo = new Vehiculo("Civic", "Honda", 25000, 50000);
+
+        // Mostrar marca y modelo del vehículo por consola
+        miVehiculo.mostrarMarcaYModelo();
+
+    </script>
+</body>
+</html>
