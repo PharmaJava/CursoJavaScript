@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Para trabajar con modulos utilizamos la palabra reservada modulo -->
+    <script type="module">
+
+        import{calculo_IVA} from "./Calculos_financieros.js"
+
+        let coste=15000;
+
+        let iva= calculo_IVA(coste);
+
+        console.log(coste+iva);
+
+        let contenedor= document.getElementById("espacio");
+
+        contenedor.innerHTML= coste+iva;
+    
+
+    </script>
+
+    <div id="espacio">-
+
+
+    </div>
+</body>
+</html>
