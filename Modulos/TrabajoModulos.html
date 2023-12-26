@@ -4,29 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* Puedes mover estos estilos a un archivo CSS externo si lo prefieres */
+        .impuesto-label {
+            float: left;
+            margin-right: 15px;
+        }
+    </style>
 </head>
 <body>
-<!-- Para trabajar con modulos utilizamos la palabra reservada modulo -->
-    <script type="module">
 
-        import{calculo_IVA} from "./Calculos_financieros.js"
+<input type="text" id="origen"> <br/><br/>
+<button id="conversor">Calcular</button>
 
-        let coste=15000;
+<br/><br/> 
 
-        let iva= calculo_IVA(coste);
+<div id="espacio">
+    <div class="impuesto-label">IVA:</div>
+    <div id="espacioIVA"></div>
 
-        console.log(coste+iva);
+    <div class="impuesto-label">IRPF:</div>
+    <div id="espacioIRPF"></div>
 
-        let contenedor= document.getElementById("espacio");
+    <div class="impuesto-label">TOTAL:</div>
+    <div id="espacioTOTAL"></div>
+</div>    
+<br/><br/>   
 
-        contenedor.innerHTML= coste+iva;
-    
-
-    </script>
-
-    <div id="espacio">-
-
-
-    </div>
 </body>
+<script type="module">
+    import { calculo_IVA, calculo_IRPF, calculo_TOTAL } from "./Calculos_financieros.js"
+
+    let contenedorIVA = document.getElementById("espacioIVA");
+    let contenedorIRPF = document.getElementById("espacioIRPF");
+    let contenedorTOTAL = document.getElementById("espacioTOTAL");
+    let origen = document.getElementById("origen");
+    let elBoton = document.getElementById("conversor");
+
+    elBoton.addEventListener("click", () => {
+        contenedorIVA.innerHTML = calculo_IVA(origen.value);
+        contenedorIRPF.innerHTML = calculo_IRPF(origen.value);
+        contenedorTOTAL.innerHTML = calculo_TOTAL(origen.value);
+    });
+</script>
 </html>
