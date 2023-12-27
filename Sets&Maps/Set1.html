@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //trabajando con sets
+
+        const nombres = new Set ();
+
+        nombres.add ("Antonio");
+        nombres.add ("Maria");
+        nombres.add ("Juan");
+        nombres.add ("Ana");
+        nombres.add ("maria");
+        //los repetidos no lo incluyen
+        console.log (nombres);
+
+        //para verlos tenemos que usar la propiedad size
+        console.log (nombres.size);
+
+        //metodo has da true o false si hay o no
+        console.log(nombres.has("Ana"));
+
+        console.log (nombres);
+
+        //para eliminar elementos del set:
+        nombres.delete("maria");
+
+        console.log (nombres);
+
+        //para eliminar todo usamos clear
+        // nombres.clear();
+
+        //para recorrer utilizamos el bucle for each
+
+        nombres.forEach( elNombre =>{
+            document.write(elNombre);
+
+        });
+
+        //Un array Normal
+        const Nombres= ["Juan", "Pepe", "Maria", "Lucia", "Sara", "Pepe","Antonio", "Juan", "Sandra"];
+
+        //metemos el array en el set, no se duplica nada
+        const NombresSinDuplicar= new Set(Nombres);
+
+        console.log(NombresSinDuplicar);
+
+    </script>
+</body>
+</html>
