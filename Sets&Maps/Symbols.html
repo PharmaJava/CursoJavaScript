@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbols</title>
+</head>
+<body>
+    <script>
+
+    // Creando dos símbolos distintos con descripciones diferentes
+    let s1 = Symbol("juan");
+    let s2 = Symbol("juan");
+
+    console.log(s1 === s2); // Resultado false, cada símbolo es único
+
+    console.log(typeof s1);
+
+    // Utilizando símbolos para prevenir la sobrescritura de propiedades
+    const NOMBRE = Symbol();
+    const ESTUDIAR = Symbol();
+
+    const alumno = {
+        [NOMBRE]: "Juan",
+        apellido: "Diaz",
+        edad: 21
+    }
+
+    console.log(alumno);
+
+    // Asignando una función a una propiedad específica utilizando el símbolo
+    alumno[ESTUDIAR] = function() {
+        console.log("El alumno estudia");
+    };
+
+    alumno[ESTUDIAR](); // Llamando a la función asociada al símbolo ESTUDIAR
+
+    // Iterando sobre todas las propiedades (incluyendo símbolos)
+    for (let prop in alumno) {
+        console.log(prop + ": " + alumno[prop]);
+    }
+
+    // Obteniendo solo los símbolos del objeto
+    const simbolos = Object.getOwnPropertySymbols(alumno);
+
+    console.log("\nPropiedades de tipo símbolo:");
+    simbolos.forEach(symbol => {
+        console.log(symbol.toString() + ": " + alumno[symbol]);
+    });
+
+    </script>
+</body>
+</html>

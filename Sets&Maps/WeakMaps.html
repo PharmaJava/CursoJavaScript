@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeakMap</title>
+</head>
+<body>
+    <script>
+
+    // Definimos un objeto empleado
+    const empleado = {
+        empresa: "Pidoras Informaticas"
+    };    
+
+    // Creamos un WeakMap llamado almacen_empleados
+    const almacen_empleados = new WeakMap();
+
+    // Asociamos el objeto empleado con el valor "Juan" en el WeakMap
+    almacen_empleados.set(empleado, "Juan");
+
+    console.log(almacen_empleados);
+
+    // Métodos de WeakMap
+
+    // has: Comprueba si una clave está presente en el WeakMap
+    console.log(almacen_empleados.has(empleado)); // Devuelve true si la clave está presente
+
+    // get: Obtiene el valor asociado a una clave en el WeakMap
+    console.log(almacen_empleados.get(empleado)); // Devuelve el valor asociado a la clave
+
+    // delete: Elimina la entrada asociada a una clave en el WeakMap
+    almacen_empleados.delete(empleado);
+    console.log(almacen_empleados.has(empleado)); // Devuelve false porque la entrada ha sido eliminada
+
+    // No hay método "clear" en WeakMap, pero puedes dejar que la recolección de basura elimine las entradas automáticamente
+    // cuando la referencia al objeto clave se pierde
+
+    
+    </script>
+</body>
+</html>

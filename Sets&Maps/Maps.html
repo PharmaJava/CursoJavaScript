@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+    // Los maps son similares a los arrays y están formados por parejas clave-valor
+
+    const empleado = new Map();
+    
+    // Con set añadimos la clave y el valor
+    empleado.set("Nombre", "Antonio");
+    empleado.set("Salario", 3500);
+    empleado.set("Antigüedad", 5);
+    empleado.set("Activo", true);
+    empleado.set("Com trim1", [1050, 1200, 1125]);    
+
+    console.log(empleado);
+
+    // Métodos de Map
+    console.log(empleado.size);
+    console.log(empleado.has("Salario"));
+    console.log(empleado.get("Salario"));
+
+    // Con esto vaciamos el mapa entero
+    // empleado.clear();     
+    // console.log(empleado);
+
+    // Con esto podemos iniciar un nuevo mapa con los datos del mapa original
+    const empleado_nuevo = new Map(empleado);
+
+    // Podemos sobrescribir valores
+    empleado_nuevo.set("Nombre", "Ana");    
+
+    // Para recorrer el mapa con forEach
+
+    // Método 1: Utilizando una función anónima
+    empleado_nuevo.forEach(function(value, key) {
+        document.write(key + "=" +  value);
+        document.write("<br/>");
+    });
+
+    document.write("<br/>");
+
+    // Método 2: Utilizando una función arrow
+    empleado_nuevo.forEach((datos, index) => {
+        document.write(datos + "= " + index);
+        document.write("<br/>");
+    });
+
+    document.write("<br/>");
+
+    // Método 3: Utilizando una función arrow (solo valores)
+    empleado_nuevo.forEach(datos => {
+        document.write(datos);
+        document.write("<br/>");
+    });
+
+    document.write("<br/>");
+
+    // Otra manera con bucle for of y entries
+    for (const datos of empleado_nuevo.entries()) {
+        document.write(datos);
+        document.write("<br/>");
+    }
+
+    document.write("<br/>");
+
+    // Si necesitas solo las claves, usa .keys; si necesitas solo los valores, usa .values
+
+    // Solo las claves
+    for (const clave of empleado_nuevo.keys()) {
+        document.write(clave);
+        document.write("<br/>");
+    }
+
+    document.write("<br/>");
+
+    // Solo los valores
+    for (const valor of empleado_nuevo.values()) {
+        document.write(valor);
+        document.write("<br/>");
+    }
+
+    document.write("<br/>");
+
+    </script>
+</body>
+</html>
