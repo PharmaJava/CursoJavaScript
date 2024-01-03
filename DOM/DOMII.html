@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Párrafo que actúa como un botón para mostrar/ocultar cursos -->
+    <p id="cProgramacion">Cursos de programación</p>    
+
+    <!-- Contenedor para mostrar los cursos -->
+    <p id="contenidoCursos"></p>
+
+    <!-- Otro párrafo que podría contener más contenido de la página -->
+    <p id="cWeb">Cursos de Diseño Web</p>   
+
+    <script>
+        // Obtener el elemento con el ID "cProgramacion" y asignarlo a la variable elemento
+        let elemento = document.getElementById("cProgramacion");
+
+        // Agregar un evento de clic al elemento para llamar a la función mostrarCursos
+        elemento.addEventListener("click", mostrarCursos);
+
+        // Función para mostrar u ocultar los cursos al hacer clic en "Cursos de programación"
+        function mostrarCursos() {
+            // Verificar si el contenidoCursos está vacío
+            if (document.getElementById("contenidoCursos").innerHTML == "") {
+                // Si está vacío, agregar cursos al contenidoCursos
+                document.getElementById("contenidoCursos").innerHTML = "Curso Python<br/>Curso Java<br>Curso C#";
+            } else {
+                // Si no está vacío, limpiar el contenidoCursos
+                document.getElementById("contenidoCursos").innerHTML = "";
+            }
+        }
+    </script>
+</body>
+</html>

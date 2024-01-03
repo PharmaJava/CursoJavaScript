@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .casas {
+            border: solid;
+            border-width: 5px;
+            border-color: black;    
+        }
+
+        .pisos {
+            border: solid;
+            border-width: 5px;
+            border-color: black;    
+        }
+    </style>
+</head>
+<body>
+    <input type="button" id="botCasas" value="Casas">
+    <input type="button" id="botPisos" value="Pisos">
+    <table width="100%">
+        <tr style="text-align: center;">
+            <td><img src="/DOM/casa1.jpeg" width="300px" class="casas"></td>
+            <td><img src="/DOM/casa2.jpeg" width="300px" class="casas"></td>
+            <td><img src="/DOM/casa3.jpeg" width="300px" class="casas"></td>
+        </tr>
+        <tr style="text-align: center;">
+            <td><img src="/DOM/piso1.jpeg" width="300px" class="pisos"></td>
+            <td><img src="/DOM/piso2.jpeg" width="300px" class="pisos"></td>
+            <td><img src="/DOM/piso3.jpeg" width="300px" class="pisos"></td>
+        </tr>
+    </table>
+    <script>
+        document.getElementById("botCasas").addEventListener("click", function(){
+            const casas = document.getElementsByClassName("casas");
+            for (let i=0; i<3; i++) casas[i].style.border = "solid 5px red";
+        });
+
+        document.getElementById("botPisos").addEventListener("click", function(){
+            const casas = document.getElementsByClassName("pisosc");
+            for (let i=0; i<3; i++) casas[i].style.border = "solid 5px red";
+        });
+
+
+    </script>
+</body>
+</html>

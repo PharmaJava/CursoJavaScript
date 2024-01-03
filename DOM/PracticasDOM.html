@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Formulario con el nombre "Datos Personales" -->
+    <form name="Datos Personales">
+
+        <!-- Párrafo con id "adicionales" -->
+        <p id="adicionales">Estos son datos adicionales</p>    
+
+        <!-- Párrafo con id "importantes" -->
+        <p id="importantes">Estos son datos importantes</p>   
+
+    </form>
+
+    <script>
+
+    // Declaración de la variable 'elemento'
+    let elemento;
+    
+    // Asignando el nombre del formulario a la variable 'elemento'
+    elemento = document.forms[0].name;
+
+    // Buscando un elemento con el id "importantes"
+    let buscamos = document.getElementById("importantes");
+
+    // Mostrando en la consola el nombre del formulario y el elemento con id "importantes"
+    console.log(elemento);
+    console.log(buscamos);
+
+    // Añadiendo un nuevo elemento al formulario con id "importantes"
+    let nuevoElemento = document.createElement("p");
+    nuevoElemento.textContent = "Este es un nuevo párrafo";
+
+    // Añadiendo el nuevo elemento al final del formulario
+    document.forms[0].appendChild(nuevoElemento);
+
+    </script>
+</body>
+</html>
