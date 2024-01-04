@@ -12,9 +12,9 @@
     
     <script type="text/javascript">
 
-        function localizaElemDom(){
+        // function localizaElemDom(){
 
-            const card= document.querySelectorAll('.card');
+        //     const card= document.querySelectorAll('.card');
 
             //     for (let i=0; i<card.length; i++){
             //     card[i].addEventListener('mouseover', function(){
@@ -24,19 +24,145 @@
             // }
     
 
-        for (let i of card){
-            i.addEventListener('mouseover', function(){
-                alert("Has pasado el raton por encima");
+    //     for (let i of card){
+    //         i.addEventListener('mouseover', function(){
+    //             alert("Has pasado el raton por encima");
 
-            });
-        }
+    //         });
+    //     }
+    // }
+
+    function localizaElemDom1() {
+        const titulo = document.querySelector(".contenido-hero h1");
+
+        titulo.addEventListener("mouseover", function () {
+            document.querySelector(".contenido-hero h1").textContent = "Las mejores vacaciones del año 2024";
+        });
+
+        titulo.addEventListener("mouseout", function () {
+            document.querySelector(".contenido-hero h1").textContent = "Encuentra alojamiento para tu próxima escapada";
+        });
     }
 
 
-    </script>
+    function localizaElemDom2() {
+    const imagen = document.querySelector(".card img");
+
+    imagen.addEventListener("mouseover", function () {
+        imagen.src = "img/hacer3.jpg";
+    });
+
+    imagen.addEventListener("mouseout", function () {
+        imagen.src = "img/hacer1.jpg";
+    });
+}
+
+
+    function localizaElemDom(){
+
+        const encabezado= document.querySelector("h1");
+
+        encabezado.style.backgroundColor= "black";
+
+
+    }
+
+    function localizaElemDom3(){
+
+        const elementos= document.querySelector(".contenedor-cards");
+
+        console.log(elementos.children[2].children[1].parentElement);
+
+
+
+    }
+
+    function eliminaElementoDom() {
+        const elemento = document.querySelector(".contendor-cards").children[1].children[0];
+
+        const hueco= document.createElement("div");
+
+        hueco.style.width="200px";
+        hueco.style.height="180 px";
+        hueco.textContent= "Imagen eliminada";
+
+        elemento.replaceWith(hueco);
+
+
+        }
+    
+        function muestraOfertas(){
+            alert('Consulta las ofertas para destinos de playa');
+        }
+
+        document.addEventListener("DOMContentLoaded", ()=>{
+
+            imagenCancun= document.getElementById("cancun");
+
+       // document.getElementById("cancun").onclick= muestraOfertas; 
+
+            imagenCancun.addEventListener("mouseenter", ()=>{
+            imagenCancun.style.border="2px solid red";
+
+        });
+    
+            imagenCancun.addEventListener("mouseout", function (){
+            this.style.border="";
+        
+        });
+
+    });
+
+        function OtroEvento(){
+            document.addEventListener("DOMContentLoaded",()=>{
+
+            const busqueda=document.querySelector(".busqueda");
+            busqueda.addEventListener("keypress", ()=>{
+
+                console.log("Escribiendo...");
+
+            });
+            
+            
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+        const formulario = document.querySelector("#formulario");
+
+        formulario.addEventListener("submit", validarDatos);
+
+        function validarDatos(e) {
+            e.preventDefault();
+            alert("Has pulsado el formulario");
+        }
+
+        const elemCard = document.querySelector(".card");
+        const elemInfo = document.querySelector(".info");
+        const elemTitulo = document.querySelector(".titulo");
+
+        elemCard.addEventListener("click", () => {
+            alert("Has hecho click en el card");
+        });
+
+        elemInfo.addEventListener("click", () => {
+            alert("Has hecho click en el Info");
+        });
+
+        elemTitulo.addEventListener("click", (e) => {
+            e.stopPropagation();
+            alert("Has hecho click en el Titulo");
+        });
+
+        });
+
+
+
+</script>
 
 </head>
-<body onload="localizaElemDom()">
+<body onload="localizaElemDom1(), localizaElemDom2(), localizaElemDom(), localizaElemDom3()">
 
     <div class="hero">
         <header class="header contenedor">
@@ -66,7 +192,7 @@
             <h2>Que Hacer</h2>
             <div class="contenedor-cards">
                     <div class="card">
-                        <img src="img/hacer1.jpg">
+                        <img src="img/hacer1.jpg" id="cancun" >
                         <div class="info">
                             <p class="categoria concierto">PLAYAS</p>
                             <p class="titulo">Mejores playas 2022</p>
@@ -80,6 +206,7 @@
                             <p class="titulo">Paisajes increibles</p>
                             <p class="precio">A partir de 750 €</p>
                         </div>
+                        <input type="button" value="Eliminar" onclick="eliminaElementoDom()">
                     </div> <!--.card-->
                     <div class="card">
                         <img src="img/hacer3.jpg">
